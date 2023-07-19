@@ -1,5 +1,4 @@
-﻿using LocationService.Domain.Aggregates.LocationAggregate;
-using Microsoft.AspNetCore.SignalR;
+﻿using Microsoft.AspNetCore.SignalR;
 
 namespace LocationService.Domain.Hubs
 {

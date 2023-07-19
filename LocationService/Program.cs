@@ -32,16 +32,5 @@ app.UseAuthorization();
 
 app.MapControllers();
 app.MapHub<LocationHub>("/locationHub");
-app.Use(async (context, next) =>
-{
-    if (context.Request.Path == "/")
-    {
-        await context.Response.SendFileAsync(builder.Environment.WebRootFileProvider.GetFileInfo("index.html"));
-    }
-    else
-    {
-        await next();
-    }
-});
 
 app.Run();
